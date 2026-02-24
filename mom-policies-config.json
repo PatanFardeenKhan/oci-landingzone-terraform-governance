@@ -1,0 +1,377 @@
+{
+  "policies_configuration": {
+    "supplied_policies": {
+      "MoM-Tenancy-Security-Admins": {
+        "name": "MoM-Tenancy-Security-Admins",
+        "compartment_id": "ocid1.tenancy.oc21..aaaaaaaankln5mhficdkuyjrzircojjvy5up7ocmqveqrjzp26qqzslca6ka",
+        "description": "Tenancy-wide security administrative permissions.",
+        "statements": [
+          "Allow group MoM-Central-Security-Admins to read all-resources in tenancy",
+          "Allow group MoM-Central-Security-Admins to manage announcements in tenancy",
+          "Allow group MoM-Central-Security-Admins to manage announcement-subscriptions in tenancy",
+          "Allow group MoM-Central-Security-Admins to manage cloud-guard-family in tenancy",
+          "Allow group MoM-Central-Security-Admins to manage tag-namespaces in tenancy"
+        ]
+      },
+      "MoM-Tenancy-Readonly-Users": {
+        "name": "MoM-Tenancy-Readonly-Users",
+        "compartment_id": "ocid1.tenancy.oc21..aaaaaaaankln5mhficdkuyjrzircojjvy5up7ocmqveqrjzp26qqzslca6ka",
+        "description": "Read-only access for tenancy resources.",
+        "statements": [
+          "Allow group MoM-Readonly-users to read all-resources in tenancy"
+        ]
+      },
+      "MoM-Central-Network-Admins": {
+        "name": "MoM-Central-Network-Admins",
+        "compartment_id": "lz-shared",
+        "description": "Network management for landing zone compartment_ids.",
+        "statements": [
+          "Allow group MoM-Central-Network-Admins to manage virtual-network-family in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage load-balancers in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage vcns in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage subnets in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage security-lists in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage route-tables in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage internet-gateways in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage nat-gateways in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage drgs in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage dns in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage dhcp-options in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage virtual-circuits in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage cross-connects in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage cross-connect-groups in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage ipsec-connections in compartment cmp-mom-network",
+          "Allow group MoM-Central-Network-Admins to manage cpe in compartment cmp-mom-network"
+        ]
+      },
+      "MoM-Central-Security-Admins": {
+        "name": "MoM-Central-Security-Admins",
+        "compartment_id": "lz-shared",
+        "description": "Security and logging management for landing zone.",
+        "statements": [
+          "Allow group MoM-Central-Security-Admins to read all-resources in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage secret-family in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage vaults in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage keys in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage logging-family in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage log-groups in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage audits in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage alarms in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage stream-family in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage ons-topics in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage bastion in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage bastion-session in compartment cmp-mom-security"
+        ]
+      },
+      "MoM-Central-Platform-Admins": {
+        "name": "MoM-Central-Platform-Admins",
+        "compartment_id": "lz-shared",
+        "description": "Platform resource management for landing zone.",
+        "statements": [
+          "Allow group MoM-Central-Platform-Admins to manage all-resources in compartment cmp-mom-platform",
+          "Allow group MoM-Central-Platform-Admins to manage instance-family in compartment cmp-mom-platform",
+          "Allow group MoM-Central-Platform-Admins to manage volume-family in compartment cmp-mom-platform",
+          "Allow group MoM-Central-Platform-Admins to manage file-family in compartment cmp-mom-platform",
+          "Allow group MoM-Central-Platform-Admins to manage object-family in compartment cmp-mom-platform",
+          "Allow group MoM-Central-Platform-Admins to manage functions-family in compartment cmp-mom-platform",
+          "Allow group MoM-Central-Platform-Admins to manage database-family in compartment cmp-mom-platform",
+          "Allow group MoM-Central-Platform-Admins to manage email-family in compartment cmp-mom-platform"
+        ]
+      },
+      "MoM-Prod-IAM-Admins": {
+        "name": "MoM-Prod-IAM-Admins",
+        "compartment_id": "lz-prod",
+        "description": "IAM administration for production.",
+        "statements": [
+          "Allow group MoM-Prod-IAM-Admins to manage policies in compartment cmp-mom-prod"
+        ]
+      },
+      "MoM-Prod-Network-Admins": {
+        "name": "MoM-Prod-Network-Admins",
+        "compartment_id": "lz-prod",
+        "description": "Network management for production environment.",
+        "statements": [
+          "Allow group MoM-Prod-Network-Admins to manage virtual-network-family in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage load-balancers in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage vcns in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage subnets in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage security-lists in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage route-tables in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage internet-gateways in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage nat-gateways in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage drgs in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage dns in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage dhcp-options in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage virtual-circuits in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage cross-connects in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage cross-connect-groups in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage ipsec-connections in compartment cmp-mom-p-network",
+          "Allow group MoM-Prod-Network-Admins to manage cpe in compartment cmp-mom-p-network"
+        ]
+      },
+      "MoM-Prod-Security-Admins": {
+        "name": "MoM-Prod-Security-Admins",
+        "compartment_id": "lz-prod",
+        "description": "Security management for production environment.",
+        "statements": [
+          "Allow group MoM-Prod-Security-Admins to read all-resources in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage secret-family in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage vaults in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage keys in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage logging-family in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage log-groups in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage audits in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage alarms in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage stream-family in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage ons-topics in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage bastion in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage bastion-session in compartment cmp-mom-p-security"
+        ]
+      },
+      "MoM-Prod-Platform-Admins": {
+        "name": "MoM-Prod-Platform-Admins",
+        "compartment_id": "lz-prod",
+        "description": "Platform resource management for production.",
+        "statements": [
+          "Allow group MoM-Prod-Platform-Admins to manage all-resources in compartment cmp-mom-p-platform",
+          "Allow group MoM-Prod-Platform-Admins to manage instance-family in compartment cmp-mom-p-platform",
+          "Allow group MoM-Prod-Platform-Admins to manage volume-family in compartment cmp-mom-p-platform",
+          "Allow group MoM-Prod-Platform-Admins to manage file-family in compartment cmp-mom-p-platform",
+          "Allow group MoM-Prod-Platform-Admins to manage object-family in compartment cmp-mom-p-platform",
+          "Allow group MoM-Prod-Platform-Admins to manage functions-family in compartment cmp-mom-p-platform",
+          "Allow group MoM-Prod-Platform-Admins to manage database-family in compartment cmp-mom-p-platform",
+          "Allow group MoM-Prod-Platform-Admins to manage email-family in compartment cmp-mom-p-platform"
+        ]
+      },
+      "MoM-Prod-Platform-EBS-MoME": {
+        "name": "MoM-Prod-Platform-EBS-MoME",
+        "compartment_id": "lz-prod",
+        "description": "EBS MoME sub-compartment management.",
+        "statements": [
+          "Allow group MoM-Prod-Platform-EBS-MoME to manage all-resources in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-mom",
+          "Allow group MoM-Prod-Platform-EBS-MoME to manage instance-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-mom",
+          "Allow group MoM-Prod-Platform-EBS-MoME to manage volume-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-mom",
+          "Allow group MoM-Prod-Platform-EBS-MoME to manage file-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-mom",
+          "Allow group MoM-Prod-Platform-EBS-MoME to manage object-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-mom",
+          "Allow group MoM-Prod-Platform-EBS-MoME to manage functions-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-mom",
+          "Allow group MoM-Prod-Platform-EBS-MoME to manage database-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-mom",
+          "Allow group MoM-Prod-Platform-EBS-MoME to manage email-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-mom"
+        ]
+      },
+      "MoM-Prod-Platform-EBS-PARRE": {
+        "name": "MoM-Prod-Platform-EBS-PARRE",
+        "compartment_id": "lz-prod",
+        "description": "EBS PARRE sub-compartment management.",
+        "statements": [
+          "Allow group MoM-Prod-Platform-EBS-PARRE to manage all-resources in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-parre",
+          "Allow group MoM-Prod-Platform-EBS-PARRE to manage instance-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-parre",
+          "Allow group MoM-Prod-Platform-EBS-PARRE to manage volume-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-parre",
+          "Allow group MoM-Prod-Platform-EBS-PARRE to manage file-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-parre",
+          "Allow group MoM-Prod-Platform-EBS-PARRE to manage object-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-parre",
+          "Allow group MoM-Prod-Platform-EBS-PARRE to manage functions-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-parre",
+          "Allow group MoM-Prod-Platform-EBS-PARRE to manage database-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-parre",
+          "Allow group MoM-Prod-Platform-EBS-PARRE to manage email-family in compartment cmp-mom-p-platform:cmp-mom-p-platform-ebs-parre"
+        ]
+      },
+      "MoM-Prod-Projects-Admins": {
+        "name": "MoM-Prod-Projects-Admins",
+        "compartment_id": "lz-prod",
+        "description": "General project administration in production.",
+        "statements": [
+          "Allow group MoM-Prod-Projects-Admins to manage all-resources in compartment cmp-mom-p-projects",
+          "Allow group MoM-Prod-Projects-Admins to manage instance-family in compartment cmp-mom-p-projects",
+          "Allow group MoM-Prod-Projects-Admins to manage volume-family in compartment cmp-mom-p-projects",
+          "Allow group MoM-Prod-Projects-Admins to manage file-family in compartment cmp-mom-p-projects",
+          "Allow group MoM-Prod-Projects-Admins to manage object-family in compartment cmp-mom-p-projects",
+          "Allow group MoM-Prod-Projects-Admins to manage functions-family in compartment cmp-mom-p-projects",
+          "Allow group MoM-Prod-Projects-Admins to manage database-family in compartment cmp-mom-p-projects",
+          "Allow group MoM-Prod-Projects-Admins to manage email-family in compartment cmp-mom-p-projects"
+        ]
+      },
+      "MoM-Prod-Project-APEX-team": {
+        "name": "MoM-Prod-Project-APEX-team",
+        "compartment_id": "lz-prod",
+        "description": "APEX project team management.",
+        "statements": [
+          "Allow group MoM-Prod-Project-APEX-team to manage all-resources in compartment cmp-mom-p-projects:cmp-mom-p-apex",
+          "Allow group MoM-Prod-Project-APEX-team to manage instance-family in compartment cmp-mom-p-projects:cmp-mom-p-apex",
+          "Allow group MoM-Prod-Project-APEX-team to manage volume-family in compartment cmp-mom-p-projects:cmp-mom-p-apex",
+          "Allow group MoM-Prod-Project-APEX-team to manage file-family in compartment cmp-mom-p-projects:cmp-mom-p-apex",
+          "Allow group MoM-Prod-Project-APEX-team to manage object-family in compartment cmp-mom-p-projects:cmp-mom-p-apex",
+          "Allow group MoM-Prod-Project-APEX-team to manage functions-family in compartment cmp-mom-p-projects:cmp-mom-p-apex",
+          "Allow group MoM-Prod-Project-APEX-team to manage database-family in compartment cmp-mom-p-projects:cmp-mom-p-apex",
+          "Allow group MoM-Prod-Project-APEX-team to manage email-family in compartment cmp-mom-p-projects:cmp-mom-p-apex"
+        ]
+      },
+      "MoM-Prod-Project-Proj1-team": {
+        "name": "MoM-Prod-Project-Proj1-team",
+        "compartment_id": "lz-prod",
+        "description": "Proj1 team management.",
+        "statements": [
+          "Allow group MoM-Prod-Project-Proj1-team to manage all-resources in compartment cmp-mom-p-projects:cmp-mom-p-proj1",
+          "Allow group MoM-Prod-Project-Proj1-team to manage instance-family in compartment cmp-mom-p-projects:cmp-mom-p-proj1",
+          "Allow group MoM-Prod-Project-Proj1-team to manage volume-family in compartment cmp-mom-p-projects:cmp-mom-p-proj1",
+          "Allow group MoM-Prod-Project-Proj1-team to manage file-family in compartment cmp-mom-p-projects:cmp-mom-p-proj1",
+          "Allow group MoM-Prod-Project-Proj1-team to manage object-family in compartment cmp-mom-p-projects:cmp-mom-p-proj1",
+          "Allow group MoM-Prod-Project-Proj1-team to manage functions-family in compartment cmp-mom-p-projects:cmp-mom-p-proj1",
+          "Allow group MoM-Prod-Project-Proj1-team to manage database-family in compartment cmp-mom-p-projects:cmp-mom-p-proj1",
+          "Allow group MoM-Prod-Project-Proj1-team to manage email-family in compartment cmp-mom-p-projects:cmp-mom-p-proj1"
+        ]
+      },
+      "MoM-Test-IAM-Admins": {
+        "name": "MoM-Test-IAM-Admins",
+        "compartment_id": "lz-test",
+        "description": "IAM administration for test environment.",
+        "statements": [
+          "Allow group MoM-Test-IAM-Admins to manage policies in compartment cmp-mom-test"
+        ]
+      },
+      "MoM-Test-Network-Admins": {
+        "name": "MoM-Test-Network-Admins",
+        "compartment_id": "lz-test",
+        "description": "Network management for test environment.",
+        "statements": [
+          "Allow group MoM-Test-Network-Admins to manage virtual-network-family in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage load-balancers in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage vcns in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage subnets in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage security-lists in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage route-tables in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage internet-gateways in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage nat-gateways in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage drgs in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage dns in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage dhcp-options in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage virtual-circuits in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage cross-connects in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage cross-connect-groups in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage ipsec-connections in compartment cmp-mom-t-network",
+          "Allow group MoM-Test-Network-Admins to manage cpe in compartment cmp-mom-t-network"
+        ]
+      },
+      "MoM-Test-Security-Admins": {
+        "name": "MoM-Test-Security-Admins",
+        "compartment_id": "lz-test",
+        "description": "Security management for test environment.",
+        "statements": [
+          "Allow group MoM-Test-Security-Admins to read all-resources in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage secret-family in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage vaults in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage keys in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage logging-family in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage log-groups in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage audits in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage alarms in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage stream-family in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage ons-topics in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage bastion in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage bastion-session in compartment cmp-mom-d-security"
+        ]
+      },
+      "MoM-Test-Platform-Admins": {
+        "name": "MoM-Test-Platform-Admins",
+        "compartment_id": "lz-test",
+        "description": "Platform management for test environment.",
+        "statements": [
+          "Allow group MoM-Test-Platform-Admins to manage all-resources in compartment cmp-mom-t-platform",
+          "Allow group MoM-Test-Platform-Admins to manage instance-family in compartment cmp-mom-t-platform",
+          "Allow group MoM-Test-Platform-Admins to manage volume-family in compartment cmp-mom-t-platform",
+          "Allow group MoM-Test-Platform-Admins to manage file-family in compartment cmp-mom-t-platform",
+          "Allow group MoM-Test-Platform-Admins to manage object-family in compartment cmp-mom-t-platform",
+          "Allow group MoM-Test-Platform-Admins to manage functions-family in compartment cmp-mom-t-platform",
+          "Allow group MoM-Test-Platform-Admins to manage database-family in compartment cmp-mom-t-platform",
+          "Allow group MoM-Test-Platform-Admins to manage email-family in compartment cmp-mom-t-platform"
+        ]
+      },
+      "MoM-Test-Sub-compartments": {
+        "name": "MoM-Test-Sub-compartments",
+        "compartment_id": "lz-test",
+        "description": "Management for test sub-compartments (EBS, Projects, Teams).",
+        "statements": [
+          "Allow group MoM-Test-Platform-Admins to manage all-resources in compartment cmp-mom-t-platform:cmp-mom-t-platform-ebs-mom",
+          "Allow group MoM-Test-Platform-Admins to manage all-resources in compartment cmp-mom-t-platform:cmp-mom-t-platform-ebs-parre",
+          "Allow group MoM-Test-Platform-Admins to manage all-resources in compartment cmp-mom-t-projects",
+          "Allow group MoM-Test-Platform-Admins to manage all-resources in compartment cmp-mom-t-projects:cmp-mom-t-apex",
+          "Allow group MoM-Test-Platform-Admins to manage all-resources in compartment cmp-mom-t-projects:cmp-mom-t-proj1"
+        ]
+      },
+      "MoM-Dev-IAM-Admins": {
+        "name": "MoM-Dev-IAM-Admins",
+        "compartment_id": "lz-dev",
+        "description": "IAM administration for development.",
+        "statements": [
+          "Allow group MoM-Dev-IAM-Admins to manage policies in compartment cmp-mom-dev"
+        ]
+      },
+      "MoM-Dev-Network-Admins": {
+        "name": "MoM-Dev-Network-Admins",
+        "compartment_id": "lz-dev",
+        "description": "Network management for development environment.",
+        "statements": [
+          "Allow group MoM-Dev-Network-Admins to manage virtual-network-family in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage load-balancers in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage vcns in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage subnets in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage security-lists in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage route-tables in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage internet-gateways in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage nat-gateways in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage drgs in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage dns in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage dhcp-options in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage virtual-circuits in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage cross-connects in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage cross-connect-groups in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage ipsec-connections in compartment cmp-mom-d-network",
+          "Allow group MoM-Dev-Network-Admins to manage cpe in compartment cmp-mom-d-network"
+        ]
+      },
+      "MoM-Dev-Security-Admins": {
+        "name": "MoM-Dev-Security-Admins",
+        "compartment_id": "lz-dev",
+        "description": "Security and logging management for development.",
+        "statements": [
+          "Allow group MoM-Dev-Security-Admins to read all-resources in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage secret-family in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage vaults in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage keys in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage logging-family in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage log-groups in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage audits in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage alarms in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage stream-family in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage ons-topics in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage bastion in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage bastion-session in compartment cmp-mom-d-security"
+        ]
+      },
+      "MoM-Dev-Platform-Admins": {
+        "name": "MoM-Dev-Platform-Admins",
+        "compartment_id": "lz-dev",
+        "description": "Platform management for development environment.",
+        "statements": [
+          "Allow group MoM-Dev-Platform-Admins to manage all-resources in compartment cmp-mom-d-platform",
+          "Allow group MoM-Dev-Platform-Admins to manage instance-family in compartment cmp-mom-d-platform",
+          "Allow group MoM-Dev-Platform-Admins to manage volume-family in compartment cmp-mom-d-platform",
+          "Allow group MoM-Dev-Platform-Admins to manage file-family in compartment cmp-mom-d-platform",
+          "Allow group MoM-Dev-Platform-Admins to manage object-family in compartment cmp-mom-d-platform",
+          "Allow group MoM-Dev-Platform-Admins to manage functions-family in compartment cmp-mom-d-platform",
+          "Allow group MoM-Dev-Platform-Admins to manage database-family in compartment cmp-mom-d-platform",
+          "Allow group MoM-Dev-Platform-Admins to manage email-family in compartment cmp-mom-d-platform"
+        ]
+      },
+      "MoM-Dev-Platform-Teams": {
+        "name": "MoM-Dev-Platform-Teams",
+        "compartment_id": "lz-dev",
+        "description": "Platform management for EBS and specific team sub-compartment_ids in development.",
+        "statements": [
+          "Allow group MoM-Dev-Platform-EBS-MoME to manage all-resources in compartment cmp-mom-d-platform:cmp-mom-d-platform-ebs-mom",
+          "Allow group MoM-Dev-Platform-EBS-PARRE to manage all-resources in compartment cmp-mom-d-platform:cmp-mom-d-platform-ebs-parre",
+          "Allow group MoM-Dev-Projects-Admins to manage all-resources in compartment cmp-mom-d-projects",
+          "Allow group MoM-Dev-Project-APEX-team to manage all-resources in compartment cmp-mom-d-projects:cmp-mom-d-apex",
+          "Allow group MoM-Dev-Project-Proj1-team to manage all-resources in compartment cmp-mom-d-projects:cmp-mom-d-proj1"
+        ]
+      }
+    }
+  }
+}

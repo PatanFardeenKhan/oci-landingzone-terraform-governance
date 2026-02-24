@@ -1,0 +1,251 @@
+{
+  "network_configuration": {
+    "default_compartment_id": "prod-network",
+    "network_configuration_categories": {
+      "prod": {
+        "vcns": {
+          "vcn-mom-doha-prod-proj": {
+            "display_name": "vcn-mom-doha-prod-proj",
+            "is_ipv6enabled": false,
+            "is_oracle_gua_allocation_enabled": false,
+            "cidr_blocks": ["10.130.64.0/20"],
+            "dns_label": "momprodprojvcn",
+            "block_nat_traffic": true,
+            "subnets": {
+              "sn-prod-proj-app": {
+                "cidr_block": "10.130.64.0/24",
+                "display_name": "sn-prod-proj-app",
+                "dns_label": "prodprojapp",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-proj-app",
+                "security_list_keys": ["sl-prod-proj-app"]
+              },
+              "sn-prod-proj-db": {
+                "cidr_block": "10.130.65.0/24",
+                "display_name": "sn-prod-proj-db",
+                "dns_label": "prodprojdb",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-proj-db",
+                "security_list_keys": ["sl-prod-proj-db"]
+              },
+              "sn-prod-proj-infra": {
+                "cidr_block": "10.130.66.0/24",
+                "display_name": "sn-prod-proj-infra",
+                "dns_label": "prodprojinfra",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-proj-infra",
+                "security_list_keys": ["sl-prod-proj-infra"]
+              },
+              "sn-prod-proj-lb": {
+                "cidr_block": "10.130.67.0/24",
+                "display_name": "sn-prod-proj-lb",
+                "dns_label": "prodprojlb",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-proj-lb",
+                "security_list_keys": ["sl-prod-proj-lb"]
+              }
+            },
+            "security_lists": {
+              "sl-prod-proj-app": { "display_name": "sl-prod-proj-app", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-proj-db": { "display_name": "sl-prod-proj-db", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-proj-infra": { "display_name": "sl-prod-proj-infra", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-proj-lb": { "display_name": "sl-prod-proj-lb", "ingress_rules": [], "egress_rules": [] }
+            },
+            "route_tables": {
+              "rt-prod-proj-app": { "display_name": "rt-prod-proj-app", "route_rules": {} },
+              "rt-prod-proj-db": { "display_name": "rt-prod-proj-db", "route_rules": {} },
+              "rt-prod-proj-infra": { "display_name": "rt-prod-proj-infra", "route_rules": {} },
+              "rt-prod-proj-lb": { "display_name": "rt-prod-proj-lb", "route_rules": {} }
+            }
+          },
+          "vcn-mom-doha-prod-ebs-mome": {
+            "display_name": "vcn-mom-doha-prod-ebs-mome",
+            "is_ipv6enabled": false,
+            "is_oracle_gua_allocation_enabled": false,
+            "cidr_blocks": ["10.130.80.0/20"],
+            "dns_label": "ebspmomevcn",
+            "block_nat_traffic": true,
+            "subnets": {
+              "sn-prod-ebs-mome-lb-ext": {
+                "cidr_block": "10.130.80.0/25",
+                "display_name": "sn-prod-ebs-mome-lb-Ext",
+                "dns_label": "ebsmomeplbext",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-mome-lb-Ext",
+                "security_list_keys": ["sl-prod-ebs-mome-lb-Ext"]
+              },
+              "sn-prod-ebs-mome-lb-int": {
+                "cidr_block": "10.130.80.128/25",
+                "display_name": "sn-prod-ebs-mome-lb-int",
+                "dns_label": "ebsmomeplbint",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-mome-lb-int",
+                "security_list_keys": ["sl-prod-ebs-mome-lb-int"]
+              },
+              "sn-prod-ebs-mome-apps-ext": {
+                "cidr_block": "10.130.81.0/25",
+                "display_name": "sn-prod-ebs-mome-apps-ext",
+                "dns_label": "ebsmomepappext",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-mome-apps-ext",
+                "security_list_keys": ["sl-prod-ebs-mome-apps-ext"]
+              },
+              "sn-prod-ebs-mome-apps-int": {
+                "cidr_block": "10.130.81.128/25",
+                "display_name": "sn-prod-ebs-mome-apps-int",
+                "dns_label": "ebsmomepappint",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-mome-apps-int",
+                "security_list_keys": ["sl-prod-ebs-mome-apps-int"]
+              },
+              "sn-prod-ebs-mome-fs": {
+                "cidr_block": "10.130.82.0/25",
+                "display_name": "sn-prod-ebs-mome-fs",
+                "dns_label": "ebsmomepfs",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-mome-fs",
+                "security_list_keys": ["sl-prod-ebs-mome-fs"]
+              },
+              "sn-prod-ebs-mome-db": {
+                "cidr_block": "10.130.82.128/25",
+                "display_name": "sn-prod-ebs-mome-db",
+                "dns_label": "ebsmomepdb",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-mome-db",
+                "security_list_keys": ["sl-prod-ebs-mome-db"]
+              },
+              "sn-prod-ebs-mome-db-backup": {
+                "cidr_block": "10.130.83.0/25",
+                "display_name": "sn-prod-ebs-mome-db-backup",
+                "dns_label": "ebsmomepdbbkp",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-mome-db-backup",
+                "security_list_keys": ["sl-prod-ebs-mome-db-backup"]
+              }
+            },
+            "security_lists": {
+              "sl-prod-ebs-mome-lb-Ext": { "display_name": "sl-prod-ebs-mome-lb-Ext", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-ebs-mome-lb-int": { "display_name": "sl-prod-ebs-mome-lb-int", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-ebs-mome-apps-ext": { "display_name": "sl-prod-ebs-mome-apps-ext", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-ebs-mome-apps-int": { "display_name": "sl-prod-ebs-mome-apps-int", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-ebs-mome-fs": { "display_name": "sl-prod-ebs-mome-fs", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-ebs-mome-db": { "display_name": "sl-prod-ebs-mome-db", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-ebs-mome-db-backup": { "display_name": "sl-prod-ebs-mome-db-backup", "ingress_rules": [], "egress_rules": [] }
+            },
+            "route_tables": {
+              "rt-prod-ebs-mome-lb-Ext": { "display_name": "rt-prod-ebs-mome-lb-Ext", "route_rules": {} },
+              "rt-prod-ebs-mome-lb-int": { "display_name": "rt-prod-ebs-mome-lb-int", "route_rules": {} },
+              "rt-prod-ebs-mome-apps-ext": { "display_name": "rt-prod-ebs-mome-apps-ext", "route_rules": {} },
+              "rt-prod-ebs-mome-apps-int": { "display_name": "rt-prod-ebs-mome-apps-int", "route_rules": {} },
+              "rt-prod-ebs-mome-fs": { "display_name": "rt-prod-ebs-mome-fs", "route_rules": {} },
+              "rt-prod-ebs-mome-db": { "display_name": "rt-prod-ebs-mome-db", "route_rules": {} },
+              "rt-prod-ebs-mome-db-backup": { "display_name": "rt-prod-ebs-mome-db-backup", "route_rules": {} }
+            }
+          },
+          "vcn-mom-doha-prod-ebs-parre": {
+            "display_name": "vcn-mom-doha-prod-ebs-parre",
+            "is_ipv6enabled": false,
+            "is_oracle_gua_allocation_enabled": false,
+            "cidr_blocks": ["10.130.96.0/20"],
+            "dns_label": "pebsparrevcn",
+            "block_nat_traffic": true,
+            "subnets": {
+              "sn-prod-ebs-parre-lb-ext": {
+                "cidr_block": "10.130.96.0/25",
+                "display_name": "sn-prod-ebs-parre-lb-Ext",
+                "dns_label": "ebsparreplbext",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-parre-lb-Ext",
+                "security_list_keys": ["sl-prod-ebs-parre-lb-Ext"]
+              },
+              "sn-prod-ebs-parre-lb-int": {
+                "cidr_block": "10.130.96.128/25",
+                "display_name": "sn-prod-ebs-parre-lb-int",
+                "dns_label": "ebsparreplbint",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-parre-lb-int",
+                "security_list_keys": ["sl-prod-ebs-parre-lb-int"]
+              },
+              "sn-prod-ebs-parre-apps-ext": {
+                "cidr_block": "10.130.97.0/25",
+                "display_name": "sn-prod-ebs-parre-apps-ext",
+                "dns_label": "ebsparrepappext",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-parre-apps-ext",
+                "security_list_keys": ["sl-prod-ebs-parre-apps-ext"]
+              },
+              "sn-prod-ebs-parre-apps-int": {
+                "cidr_block": "10.130.97.128/25",
+                "display_name": "sn-prod-ebs-parre-apps-int",
+                "dns_label": "ebsparrepappint",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-parre-apps-int",
+                "security_list_keys": ["sl-prod-ebs-parre-apps-int"]
+              },
+              "sn-prod-ebs-parre-fs": {
+                "cidr_block": "10.130.98.0/25",
+                "display_name": "sn-prod-ebs-parre-fs",
+                "dns_label": "ebsparrepebsfs",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-parre-fs",
+                "security_list_keys": ["sl-prod-ebs-parre-fs"]
+              },
+              "sn-prod-ebs-parre-db": {
+                "cidr_block": "10.130.98.128/25",
+                "display_name": "sn-prod-ebs-parre-db",
+                "dns_label": "ebsparrepebsdb",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-parre-db",
+                "security_list_keys": ["sl-prod-ebs-parre-db"]
+              },
+              "sn-prod-ebs-parre-db-backup": {
+                "cidr_block": "10.130.99.0/25",
+                "display_name": "sn-prod-ebs-parre-db-backup",
+                "dns_label": "ebsparrepdbbkp",
+                "prohibit_internet_ingress": true,
+                "prohibit_public_ip_on_vnic": true,
+                "route_table_key": "rt-prod-ebs-parre-db-backup",
+                "security_list_keys": ["sl-prod-ebs-parre-db-backup"]
+              }
+            },
+            "security_lists": {
+              "sl-prod-ebs-parre-lb-Ext": { "display_name": "sl-prod-ebs-parre-lb-Ext", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-ebs-parre-lb-int": { "display_name": "sl-prod-ebs-parre-lb-int", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-ebs-parre-apps-ext": { "display_name": "sl-prod-ebs-parre-apps-ext", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-ebs-parre-apps-int": { "display_name": "sl-prod-ebs-parre-apps-int", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-ebs-parre-fs": { "display_name": "sl-prod-ebs-parre-fs", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-ebs-parre-db": { "display_name": "sl-prod-ebs-parre-db", "ingress_rules": [], "egress_rules": [] },
+              "sl-prod-ebs-parre-db-backup": { "display_name": "sl-prod-ebs-parre-db-backup", "ingress_rules": [], "egress_rules": [] }
+            },
+            "route_tables": {
+              "rt-prod-ebs-parre-lb-Ext": { "display_name": "rt-prod-ebs-parre-lb-Ext", "route_rules": {} },
+              "rt-prod-ebs-parre-lb-int": { "display_name": "rt-prod-ebs-parre-lb-int", "route_rules": {} },
+              "rt-prod-ebs-parre-apps-ext": { "display_name": "rt-prod-ebs-parre-apps-ext", "route_rules": {} },
+              "rt-prod-ebs-parre-apps-int": { "display_name": "rt-prod-ebs-parre-apps-int", "route_rules": {} },
+              "rt-prod-ebs-parre-fs": { "display_name": "rt-prod-ebs-parre-fs", "route_rules": {} },
+              "rt-prod-ebs-parre-db": { "display_name": "rt-prod-ebs-parre-db", "route_rules": {} },
+              "rt-prod-ebs-parre-db-backup": { "display_name": "rt-prod-ebs-parre-db-backup", "route_rules": {} }
+            }
+          }
+        }
+      }
+    }
+  }
+}

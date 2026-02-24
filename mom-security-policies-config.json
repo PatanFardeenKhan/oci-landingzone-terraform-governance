@@ -1,0 +1,78 @@
+{
+  "policies_configuration": {
+    "supplied_policies": {
+      "MoM-Central-Security-Admins": {
+        "name": "MoM-Central-Security-Admins",
+        "compartment_id": "lz-shared",
+        "description": "Security and logging management for landing zone.",
+        "statements": [
+          "Allow group MoM-Central-Security-Admins to read all-resources in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage secret-family in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage vaults in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage keys in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage logging-family in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage log-groups in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage alarms in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage stream-family in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage ons-topics in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage bastion in compartment cmp-mom-security",
+          "Allow group MoM-Central-Security-Admins to manage bastion-session in compartment cmp-mom-security"
+        ]
+      },
+      "MoM-Prod-Security-Admins": {
+        "name": "MoM-Prod-Security-Admins",
+        "compartment_id": "lz-prod",
+        "description": "Security management for production environment.",
+        "statements": [
+          "Allow group MoM-Prod-Security-Admins to read all-resources in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage secret-family in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage vaults in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage keys in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage logging-family in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage log-groups in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage alarms in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage stream-family in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage ons-topics in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage bastion in compartment cmp-mom-p-security",
+          "Allow group MoM-Prod-Security-Admins to manage bastion-session in compartment cmp-mom-p-security"
+        ]
+      },
+      "MoM-Test-Security-Admins": {
+        "name": "MoM-Test-Security-Admins",
+        "compartment_id": "lz-test",
+        "description": "Security management for test environment.",
+        "statements": [
+          "Allow group MoM-Test-Security-Admins to read all-resources in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage secret-family in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage vaults in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage keys in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage logging-family in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage log-groups in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage alarms in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage stream-family in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage ons-topics in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage bastion in compartment cmp-mom-d-security",
+          "Allow group MoM-Test-Security-Admins to manage bastion-session in compartment cmp-mom-d-security"
+        ]
+      },
+      "MoM-Dev-Security-Admins": {
+        "name": "MoM-Dev-Security-Admins",
+        "compartment_id": "lz-dev",
+        "description": "Security and logging management for development.",
+        "statements": [
+          "Allow group MoM-Dev-Security-Admins to read all-resources in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage secret-family in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage vaults in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage keys in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage logging-family in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage log-groups in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage alarms in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage stream-family in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage ons-topics in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage bastion in compartment cmp-mom-d-security",
+          "Allow group MoM-Dev-Security-Admins to manage bastion-session in compartment cmp-mom-d-security"
+        ]
+      }
+    }
+  }
+}
